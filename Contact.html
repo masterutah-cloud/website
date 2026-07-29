@@ -136,7 +136,12 @@
         </div>
       </div>
 
-      <form class="form-card" id="quote-form" name="quote" method="POST">
+      <form class="form-card" id="quote-form" name="quote" method="POST" action="https://formsubmit.co/masterutah@gmail.com">
+        <input type="hidden" name="_subject" value="New project inquiry — Master Construction Group site" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://mastercgroup.com/Contact.html?sent=1" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
         <p class="form-eyebrow">— Project intake</p>
         <div class="form-title">Tell us about your <em>project.</em></div>
         <p class="form-subtitle">A few quick details and we'll be in touch within a day.</p>
@@ -302,13 +307,10 @@
   document.querySelectorAll('.faq-item').forEach(item => {
     item.addEventListener('click', () => item.classList.toggle('open'));
   });
-  // Prevent default form submit (this is a static demo)
   document.getElementById('quote-form')?.addEventListener('submit', e => {
-    e.preventDefault();
     const btn = e.target.querySelector('.form-submit');
-    btn.textContent = '✓ Thanks — we\'ll be in touch within 24 hours';
-    btn.style.background = 'var(--color-success, #5db872)';
-    btn.style.borderColor = 'var(--color-success, #5db872)';
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
   });
 </script>
 </body>
