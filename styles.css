@@ -1167,6 +1167,8 @@ h3.title {
   .service-row { grid-template-columns: 1fr; gap: 14px; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .gallery-item.wide { grid-column: span 2; }
+  /* Catch-all: inline two/three-column grids used for section headers, image+text splits and stat rows across pages */
+  [style*="display:grid"], [style*="display: grid"] { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 640px) {
   section { padding: 72px 24px; }
@@ -1183,4 +1185,5 @@ h3.title {
   .port-item.tall { grid-column: 1; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-item.wide { grid-column: 1; }
+  [style*="display:grid"], [style*="display: grid"] { gap: 24px !important; }
 }
