@@ -85,11 +85,11 @@
       <p class="eyebrow">DETAILED WORK</p>
       <h2 class="display">Twenty-two <em>completed</em>. Twelve months.</h2>
     </div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;">
-      <button style="padding:10px 22px;background:var(--color-primary);color:var(--color-on-primary);border:1px solid var(--color-primary);border-radius:var(--radius-pill);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;">All</button>
-      <button style="padding:10px 22px;background:transparent;color:var(--color-ink);border:1px solid var(--color-hairline);border-radius:var(--radius-pill);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;">Bath</button>
-      <button style="padding:10px 22px;background:transparent;color:var(--color-ink);border:1px solid var(--color-hairline);border-radius:var(--radius-pill);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;">Kitchen</button>
-      <button style="padding:10px 22px;background:transparent;color:var(--color-ink);border:1px solid var(--color-hairline);border-radius:var(--radius-pill);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;">Whole home</button>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;" id="filterBar">
+      <button class="filter-btn is-active" data-filter="all" style="padding:10px 22px;background:var(--color-primary);color:var(--color-on-primary);border:1px solid var(--color-primary);border-radius:var(--radius-pill);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;">All</button>
+      <button class="filter-btn" data-filter="bath" style="padding:10px 22px;background:transparent;color:var(--color-ink);border:1px solid var(--color-hairline);border-radius:var(--radius-pill);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;">Bath</button>
+      <button class="filter-btn" data-filter="kitchen" style="padding:10px 22px;background:transparent;color:var(--color-ink);border:1px solid var(--color-hairline);border-radius:var(--radius-pill);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;">Kitchen</button>
+      <button class="filter-btn" data-filter="whole-home" style="padding:10px 22px;background:transparent;color:var(--color-ink);border:1px solid var(--color-hairline);border-radius:var(--radius-pill);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;cursor:pointer;">Whole home</button>
     </div>
   </div>
 </section>
@@ -98,7 +98,7 @@
 <section style="padding-top: 32px;">
   <div class="container">
     <div class="gallery-grid">
-      <div class="gallery-item wide">
+      <div class="gallery-item wide" data-category="kitchen">
         <div class="port-bg" style="background-image: url('assets/proj-hideout-kitchen.png');"></div>
         <div class="port-overlay">
           <span class="port-tag">Featured · kitchen</span>
@@ -106,7 +106,7 @@
           <div class="port-loc">Hideout · Wasatch County</div>
         </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="bath">
         <div class="port-bg" style="background-image: url('assets/proj-deer-valley.png');"></div>
         <div class="port-overlay">
           <span class="port-tag">Master suite</span>
@@ -114,7 +114,7 @@
           <div class="port-loc">Deer Valley</div>
         </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="kitchen">
         <div class="port-bg" style="background-image: url('assets/proj-promontory-kitchen.png');"></div>
         <div class="port-overlay">
           <span class="port-tag">Kitchen</span>
@@ -122,7 +122,7 @@
           <div class="port-loc">Promontory</div>
         </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="bath">
         <div class="port-bg" style="background-image: url('assets/proj-tuhaye-spa.png');"></div>
         <div class="port-overlay">
           <span class="port-tag">Spa bath</span>
@@ -130,7 +130,7 @@
           <div class="port-loc">Tuhaye</div>
         </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="bath">
         <div class="port-bg" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&amp;q=85');"></div>
         <div class="port-overlay">
           <span class="port-tag">Guest bath</span>
@@ -138,7 +138,7 @@
           <div class="port-loc">Park City</div>
         </div>
       </div>
-      <div class="gallery-item wide">
+      <div class="gallery-item wide" data-category="kitchen">
         <div class="port-bg" style="background-image: url('https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=1600&amp;q=85');"></div>
         <div class="port-overlay">
           <span class="port-tag">Kitchen + dining</span>
@@ -146,7 +146,7 @@
           <div class="port-loc">Deer Valley</div>
         </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="bath">
         <img src="tycoon-park-city-ms53d6ge-hijd.png" alt="tycoon-park-city" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" />
         <div class="port-overlay">
           <span class="port-tag">Tile Bathroom</span>
@@ -154,7 +154,7 @@
           <div class="port-loc">Deer Valley</div>
         </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="whole-home">
         <img src="park-city-small-shower-ms54gy8q-ityl.png" alt="park-city-small-shower" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" />
         <div class="port-overlay">
           <span class="port-tag">Interior Paint</span>
@@ -162,7 +162,7 @@
           <div class="port-loc">Park City</div>
         </div>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-category="whole-home">
         <img src="levine-fireplace-ms53gpoz-u871.png" alt="levine-fireplace" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;" />
         <div class="port-overlay">
           <span class="port-tag">Tile Install</span>
@@ -346,6 +346,47 @@
     var show = window.scrollY > hero.offsetHeight * 0.6;
     btn.classList.toggle('is-visible', show);
   }, { passive: true });
+})();
+</script>
+<script>
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var links=document.querySelector('.nav-links');
+  if(!toggle||!links) return;
+  toggle.addEventListener('click',function(){
+    var open=links.classList.toggle('is-open');
+    toggle.classList.toggle('is-open',open);
+    toggle.setAttribute('aria-expanded',open);
+    document.body.classList.toggle('nav-open',open);
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      links.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var bar=document.getElementById('filterBar');
+  if(!bar) return;
+  var items=document.querySelectorAll('.gallery-item');
+  bar.addEventListener('click',function(e){
+    var btn=e.target.closest('.filter-btn');
+    if(!btn) return;
+    bar.querySelectorAll('.filter-btn').forEach(function(b){
+      b.classList.remove('is-active');
+      b.style.background='transparent'; b.style.color='var(--color-ink)'; b.style.borderColor='var(--color-hairline)';
+    });
+    btn.classList.add('is-active');
+    btn.style.background='var(--color-primary)'; btn.style.color='var(--color-on-primary)'; btn.style.borderColor='var(--color-primary)';
+    var f=btn.getAttribute('data-filter');
+    items.forEach(function(it){
+      it.style.display=(f==='all'||it.getAttribute('data-category')===f)?'':'none';
+    });
+  });
 })();
 </script>
 </body></html>

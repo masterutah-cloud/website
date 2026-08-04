@@ -313,5 +313,25 @@
     btn.disabled = true;
   });
 </script>
+<script>
+(function(){
+  var toggle=document.getElementById('navToggle');
+  var links=document.querySelector('.nav-links');
+  if(!toggle||!links) return;
+  toggle.addEventListener('click',function(){
+    var open=links.classList.toggle('is-open');
+    toggle.classList.toggle('is-open',open);
+    toggle.setAttribute('aria-expanded',open);
+    document.body.classList.toggle('nav-open',open);
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      links.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+})();
+</script>
 </body>
 </html>
