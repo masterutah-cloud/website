@@ -4,14 +4,6 @@
    Hero structure adapted from user-supplied reference.
    ============================================================ */
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("./fonts/Montserrat-VariableFont_wght.ttf") format("truetype-variations");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   /* Claude DS tokens (canonical) */
   --color-primary: #2c4a6e;
