@@ -4,8 +4,6 @@
    Hero structure adapted from user-supplied reference.
    ============================================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
-
 @font-face {
   font-family: "Montserrat";
   src: url("./fonts/Montserrat-VariableFont_wght.ttf") format("truetype-variations");
@@ -1150,8 +1148,8 @@ h3.title {
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
   .nav-links.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
-  .nav-links a { color: #fff; font-size: 20px; }
-  .nav-links a.is-active, .nav-links a:hover { color: var(--color-primary); }
+  .nav-links.is-open a { color: #fff !important; font-size: 20px; }
+  .nav-links.is-open a.is-active, .nav-links.is-open a:hover { color: var(--color-primary) !important; }
   body.nav-open { overflow: hidden; }
   .hero-wrap { padding: 0 28px 28px; }
   .hero-callout { grid-template-columns: 1fr; gap: 26px; align-items: start; }
@@ -1160,7 +1158,7 @@ h3.title {
   .process-steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
   .process-steps::before { display: none; }
   .process-header { grid-template-columns: 1fr; gap: 24px; }
-  .testi-grid, .invest-grid, .faq-grid, .split, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .testi-grid, .invest-grid, .faq-grid, .split, .contact-grid, .form-row { grid-template-columns: 1fr; gap: 36px; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 280px 280px 280px; }
   .port-item.tall { grid-row: auto; grid-column: 1 / 3; }
   .footer-top { grid-template-columns: 1fr 1fr; }
