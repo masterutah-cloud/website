@@ -1139,9 +1139,10 @@ h3.title {
     z-index: 210; transform: translateY(-100%); opacity: 0; pointer-events: none;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
-  .nav-links.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
-  .nav-links.is-open a { color: #fff !important; font-size: 20px; }
+  .nav-links.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; background: var(--color-canvas, #faf9f5); }
+  .nav-links.is-open a { color: var(--color-ink) !important; font-size: 20px; }
   .nav-links.is-open a.is-active, .nav-links.is-open a:hover { color: var(--color-primary) !important; }
+  .nav-toggle.is-open { color: var(--color-ink); }
   body.nav-open { overflow: hidden; }
   .hero-wrap { padding: 0 28px 28px; }
   .hero-callout { grid-template-columns: 1fr; gap: 26px; align-items: start; }
